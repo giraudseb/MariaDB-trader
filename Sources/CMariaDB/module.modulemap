@@ -1,0 +1,10 @@
+// System module exposing MariaDB Connector/C (libmariadb) to Swift.
+// The header is referenced by absolute path so both `swift build` and
+// Xcode resolve it without relying on -I include flags (which Xcode's
+// Clang dependency scanner does not apply from unsafeFlags).
+// Override the path by editing this file if MariaDB lives elsewhere.
+module CMariaDB [system] {
+    header "/opt/homebrew/opt/mariadb/include/mysql/mysql.h"
+    link "mariadb"
+    export *
+}
