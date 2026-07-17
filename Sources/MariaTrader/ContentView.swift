@@ -36,7 +36,7 @@ struct ControlBar: View {
                 Circle().fill(state.isRunning ? (state.isPaused ? Theme.warn : Theme.good) : Theme.muted)
                     .frame(width: 10, height: 10)
                 VStack(alignment: .leading, spacing: 1) {
-                    Text("MariaTrader").font(.headline)
+                    Text("MariaDB-Trader").font(.headline)
                     Text("\(state.host):\(state.port) · \(state.database)")
                         .font(.caption2).foregroundStyle(.secondary)
                 }

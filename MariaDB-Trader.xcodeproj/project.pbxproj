@@ -24,7 +24,7 @@
 			containerPortal = 0000000000000000000000C1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 0000000000000000000000D2;
-			remoteInfo = MariaTrader;
+			remoteInfo = "MariaDB-Trader";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -59,7 +59,7 @@
 
 /* Begin PBXFileReference section */
 		0000000000000000000000F1 /* TradingCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TradingCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0000000000000000000000F2 /* MariaTrader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MariaTrader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0000000000000000000000F2 /* MariaDB-Trader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MariaDB-Trader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -107,7 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				0000000000000000000000F1 /* TradingCore.framework */,
-				0000000000000000000000F2 /* MariaTrader.app */,
+				0000000000000000000000F2 /* MariaDB-Trader.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,9 +134,9 @@
 			productReference = 0000000000000000000000F1 /* TradingCore.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		0000000000000000000000D2 /* MariaTrader */ = {
+		0000000000000000000000D2 /* MariaDB-Trader */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0000000000000000000000B5 /* Build configuration list for PBXNativeTarget "MariaTrader" */;
+			buildConfigurationList = 0000000000000000000000B5 /* Build configuration list for PBXNativeTarget "MariaDB-Trader" */;
 			buildPhases = (
 				0000000000000000000000D4 /* Sources */,
 				0000000000000000000000E2 /* Frameworks */,
@@ -151,9 +151,9 @@
 			fileSystemSynchronizedGroups = (
 				00000000000000000000FA02 /* MariaTrader */,
 			);
-			name = MariaTrader;
-			productName = MariaTrader;
-			productReference = 0000000000000000000000F2 /* MariaTrader.app */;
+			name = "MariaDB-Trader";
+			productName = "MariaDB-Trader";
+			productReference = 0000000000000000000000F2 /* MariaDB-Trader.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -187,7 +187,7 @@
 			projectRoot = "";
 			targets = (
 				0000000000000000000000D1 /* TradingCore */,
-				0000000000000000000000D2 /* MariaTrader */,
+				0000000000000000000000D2 /* MariaDB-Trader */,
 				00000000000000000000AA01 /* Install */,
 			);
 		};
@@ -217,7 +217,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\nSRC=\"${BUILT_PRODUCTS_DIR}/MariaTrader.app\"\nDST=\"/Applications/MariaTrader.app\"\nif [ ! -d \"$SRC\" ]; then echo \"error: $SRC introuvable\"; exit 1; fi\necho \"Installing $SRC -> $DST\"\nrm -rf \"$DST\"\ncp -R \"$SRC\" \"$DST\"\n/usr/bin/xattr -cr \"$DST\" || true\n/usr/bin/codesign --force --deep --sign - \"$DST\" || true\n/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -f \"$DST\" || true\necho \"MariaTrader installe dans /Applications (visible Launchpad).\"\n";
+			shellScript = "set -e\nSRC=\"${BUILT_PRODUCTS_DIR}/MariaDB-Trader.app\"\nDST=\"/Applications/MariaDB-Trader.app\"\nif [ ! -d \"$SRC\" ]; then echo \"error: $SRC introuvable\"; exit 1; fi\necho \"Installing $SRC -> $DST\"\nrm -rf \"$DST\"\ncp -R \"$SRC\" \"$DST\"\n/usr/bin/xattr -cr \"$DST\" || true\n/usr/bin/codesign --force --deep --sign - \"$DST\" || true\n/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -f \"$DST\" || true\necho \"MariaDB-Trader installe dans /Applications (visible Launchpad).\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -246,7 +246,7 @@
 		};
 		00000000000000000000AA06 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0000000000000000000000D2 /* MariaTrader */;
+			target = 0000000000000000000000D2 /* MariaDB-Trader */;
 			targetProxy = 00000000000000000000AA07 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -355,7 +355,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_HARDENED_RUNTIME = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = MariaTrader;
+				INFOPLIST_KEY_CFBundleDisplayName = "MariaDB-Trader";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainNibFile = "";
@@ -365,7 +365,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				OTHER_SWIFT_FLAGS = "-Xcc -fmodule-map-file=$(SRCROOT)/Sources/CMariaDB/module.modulemap";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mariadb.mariatrader;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mariadb.MariaDBTrader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -383,7 +383,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_HARDENED_RUNTIME = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = MariaTrader;
+				INFOPLIST_KEY_CFBundleDisplayName = "MariaDB-Trader";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainNibFile = "";
@@ -393,7 +393,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				OTHER_SWIFT_FLAGS = "-Xcc -fmodule-map-file=$(SRCROOT)/Sources/CMariaDB/module.modulemap";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mariadb.mariatrader;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mariadb.MariaDBTrader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -437,7 +437,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0000000000000000000000B5 /* Build configuration list for PBXNativeTarget "MariaTrader" */ = {
+		0000000000000000000000B5 /* Build configuration list for PBXNativeTarget "MariaDB-Trader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0000000000000000000000A7 /* Debug */,

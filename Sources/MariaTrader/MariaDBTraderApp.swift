@@ -16,12 +16,12 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 }
 
 @main
-struct MariaTraderApp: App {
+struct MariaDBTraderApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
     @StateObject private var state = AppState()
 
     var body: some Scene {
-        WindowGroup("MariaTrader — MariaDB Availability Demo") {
+        WindowGroup("MariaDB-Trader — MariaDB Availability Demo") {
             ContentView()
                 .environmentObject(state)
                 .frame(minWidth: 1100, minHeight: 720)

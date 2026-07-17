@@ -6,10 +6,10 @@ let mariadbPrefix = "/opt/homebrew/opt/mariadb"
 let mariadbLib = "\(mariadbPrefix)/lib"
 
 let package = Package(
-    name: "MariaTrader",
+    name: "MariaDB-Trader",
     platforms: [.macOS(.v14)],
     products: [
-        .executable(name: "MariaTrader", targets: ["MariaTrader"]),
+        .executable(name: "MariaDB-Trader", targets: ["MariaDB-Trader"]),
         .executable(name: "smoketest", targets: ["SmokeTest"])
     ],
     targets: [
@@ -24,8 +24,10 @@ let package = Package(
         ),
         // SwiftUI application.
         .executableTarget(
-            name: "MariaTrader",
+            name: "MariaDB-Trader",
             dependencies: ["TradingCore"],
+            // Sources live under Sources/MariaTrader (folder kept as-is).
+            path: "Sources/MariaTrader",
             // Asset catalog is handled by the Xcode project, not SwiftPM.
             exclude: ["Assets.xcassets"],
             linkerSettings: [
